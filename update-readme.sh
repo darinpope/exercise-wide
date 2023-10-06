@@ -7,8 +7,9 @@ echo "number of iterations $END"
 for i in $(eval echo "{$START..$END}")
 do
   git checkout main
-  BRANCH_ID=$((1 + $RANDOM % 100))
-  git checkout branch-$BRANCH_ID
+  branchid=$((1 + $RANDOM % 100))
+  n=$(printf %03d $branchid)
+  git checkout branch-$n
   echo $i >> readme.md
   git add readme.md
   git commit -m "test"
