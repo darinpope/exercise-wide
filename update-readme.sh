@@ -10,8 +10,8 @@ do
   branchid=$((1 + $RANDOM % 100))
   n=$(printf %03d $branchid)
   git checkout branch-$n
-  echo $i >> readme.md
-  git add readme.md
+  echo $i >> README.md
+  git add README.md
   git commit -m "test"
   git push
   git checkout main
