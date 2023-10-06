@@ -14,4 +14,6 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello world"
+          echo "sleeping for 150 seconds"
+          sleep 150
+          echo "sleep is over and workflow is complete"
