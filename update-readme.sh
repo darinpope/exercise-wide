@@ -1,8 +1,7 @@
 #!/bin/bash
 cd /Users/dpope/github/exercise-wide
 START=1
-END=1
-# END=$((1 + $RANDOM % 90))
+END=$((1 + $RANDOM % 90))
 echo "number of iterations $END"
 for i in $(eval echo "{$START..$END}")
 do
@@ -15,5 +14,5 @@ do
   git commit -m "test"
   git push
   git checkout main
-  sleep 3
+  sleep 1
 done
